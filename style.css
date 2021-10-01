@@ -1,0 +1,24 @@
+html, body{
+    background-image: url(img/background.png);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+.enemy-container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+img.enemy{
+    height: 270px;
+    width: 200px;
+}
+img.ak47{
+    height: 320px;
+    width: 520px;
+    padding-left: 50%;
+}
