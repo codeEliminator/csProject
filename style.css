@@ -6,6 +6,7 @@ html, body{
     margin: 0;
     cursor: url(img/crosshair.png), auto;
 }
+
 .enemy-container{
     display: flex;
     height: 100%;
@@ -13,13 +14,54 @@ html, body{
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
-    cursor: url(img/crosshair.png), auto;
+    /* cursor: url(img/crosshair.png), auto; */
 }
-
+span.Hp-text-enemy{
+    position: absolute;
+    top: 39.7%;
+    left: 45%;
+}
+.Hp-enemy{
+    height: 10px;
+    top: 40%;
+    width: 100px;
+    background-color: red;
+    border: 1px solid black;
+    position: absolute;
+}
 img.enemy{
-    height: 320px;
+    height: 390px;
     width: 230px;
-    
+    position: absolute;
+    bottom: 20%;
+}
+.Hp-tSide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 75px;
+    width: 200px;
+    background-color: rgba(128, 128, 128, 0.7);
+    /* opacity: 0.7; */
+}
+.Hp-text-tSide{
+    opacity: 1;
+}
+.healthPlus{
+    position: absolute;
+    left: 1%;
+    height: 25px;
+    width: 25px;
+}
+.lifeLine{
+    height: 13px;
+    width: 100px;
+    background-color: white;
+    border: 1px solid black;
 }
 div.crosshair {
     height: 100%;
@@ -34,9 +76,10 @@ div.crosshair img{
     width: 100px;
 }
 img.ak47{
-    height: 240px;
-    width: 750px;
-    padding-left: 50%;
-    transform: scale(1.7);
-    cursor: inherit;
+    height: 270px;
+    width: 425px;
+    transform: scale(1.8);
+    position: absolute;
+    right: 160px;
+    bottom: 20px;
 }
