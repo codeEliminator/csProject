@@ -4,6 +4,7 @@ html, body{
     width: 100%;
     overflow: hidden;
     margin: 0;
+    cursor: url(img/crosshair.png), auto;
 }
 .enemy-container{
     display: flex;
@@ -12,13 +13,30 @@ html, body{
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
+    cursor: url(img/crosshair.png), auto;
 }
+
 img.enemy{
-    height: 270px;
-    width: 200px;
+    height: 320px;
+    width: 230px;
+    
+}
+div.crosshair {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px; border: 0px; 
+    background: transparent; 
+    position: absolute;
+}
+div.crosshair img{
+    height: 100px;
+    width: 100px;
 }
 img.ak47{
-    height: 320px;
-    width: 520px;
+    height: 240px;
+    width: 750px;
     padding-left: 50%;
+    transform: scale(1.7);
+    cursor: inherit;
 }
