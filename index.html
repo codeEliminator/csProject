@@ -2,24 +2,27 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-        <script defer src="script.js"></script>
+        <script defer src="scripts/enemy.js"></script>
+        <script defer src="scripts/tSide.js"></script>
     </head>
+
+
     <body>
+        <div class="lvl">
+            <span>LVL: 1</span>
+        </div>
         <div id = "container" class="enemy-container">
-            <!-- <span class="Hp-text-enemy">HP:</span> -->
             <div class = "Hp-enemy"></div>
             <img src="img/enemy.png" alt="botinok" class="enemy">
-            
-            
+        </div>
+        <div class = "ak47-handler">
             <img src="img/ak47Viewmodel.png" alt="ak47" class="ak47">
-            <div class = "Hp-tSide">
-                <img src="img/healthPlus.png" alt="" class="healthPlus">
-                <span class="Hp-text-tSide">100</span>
-                <div class = "lifeLine"></div>
-            </div>
-            <!-- <div class="crosshair">
-                <img src="img/crosshair.png" alt="" class="crosshair">
-            </div> -->
+        </div>
+            
+        <div class = "Hp-tSide">
+            <img src="img/healthPlus.png" alt="" class="healthPlus">
+            <span class="Hp-text-tSide">100</span>
+            <div class = "lifeLine"></div>
         </div>
         
     </body>
