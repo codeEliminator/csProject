@@ -5,6 +5,7 @@ html, body{
     overflow: hidden;
     margin: 0;
     cursor: url(img/crosshair.png), auto;
+    user-select: none;
 }
 .lvl{
     display: flex;
