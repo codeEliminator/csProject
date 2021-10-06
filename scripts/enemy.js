@@ -4,7 +4,7 @@ let HpCtside = document.getElementsByClassName("Hp-enemy")[0];
 
 let enemyCtSide = {
     health: 100,
-    dmg: 10,
+    isAlive: true,
     getDamage(damage){
         this.health -= damage;
     },
@@ -14,10 +14,14 @@ let enemyCtSide = {
     hpBar(damage){
         this.getDamage(damage);
         this.updateHealth();
+        this.checkAlive();
+    },
+    checkAlive(){
         if(this.health <= 0){
+            this.isAlive = false;
             HpCtside.style.display = "none";
         }
-    },
+    }
 }
 let enemyCtSideLoseHp = enemyCtSide.hpBar.bind(enemyCtSide);
 

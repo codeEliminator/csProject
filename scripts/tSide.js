@@ -13,11 +13,17 @@ let tSide = {
     health: 100,
     damage: 27,
     createPercent: 0,
-    pivPav(){
-        ak47.style.transform = "scale(1.6)";
-        sleep(50).then(() => {
-            ak47.style.transform = "scale(1.8)";
-        });
+    isAlive: true,
+    shoot(){
+        if(this.isAlive == true){
+            ak47.style.transform = "scale(1.6)";
+            sleep(50).then(() => {
+                ak47.style.transform = "scale(1.8)";
+            });
+        }else{
+            alert("You are dead");
+        }
+        
     },
     giveDamage(){
         enemyCtSideLoseHp(this.damage);
@@ -36,12 +42,15 @@ let tSide = {
     },
     checkHealth(){
         if(this.health <= 0){
+            this.isAlive = false;
             HpTextTside.textContent = 0;
             lifeBar.style.display = "none";
             alert("you are dead");
         }
     }
 }
+let shoot = tSide.shoot.bind(tSide);
 let tSideGiveDamage = tSide.giveDamage.bind(tSide);
-document.body.addEventListener("click", tSide.pivPav);
+let tSideGetDamage = tSide.hpBar.bind(tSide);
+document.body.addEventListener("click", shoot);
 enemy.addEventListener("click", tSideGiveDamage);
