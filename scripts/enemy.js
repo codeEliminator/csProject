@@ -25,3 +25,5 @@ let enemyCtSide = {
 }
 let enemyCtSideLoseHp = enemyCtSide.hpBar.bind(enemyCtSide);
 
+{}
+
