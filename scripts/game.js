@@ -20,15 +20,18 @@ let game = {
     showDamage(){
         this.giveDamage();
         this.damageView();
-        this.checkAlive();
+        this.checkAliveT();
+        this.checkAliveCt();
     },
-    checkAlive(){
+    checkAliveT(){
         if(!tSide.isAlive){
             clearInterval(timer);
         }
-        else if(!enemy.isAlive){
+    },
+    checkAliveCt(){
+        if(!enemyCtSide.isAlive){
             clearInterval(timer);
-        }  
+        }
     }
 }
 let showDamage = game.showDamage.bind(game);
