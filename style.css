@@ -91,3 +91,10 @@ img.ak47{
     right: 160px;
     bottom: 20px;
 }
+#DamageGiven{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #ff000067;
+    display: none;
+}

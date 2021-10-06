@@ -4,7 +4,6 @@ let HpCtside = document.getElementsByClassName("Hp-enemy")[0];
 
 let enemyCtSide = {
     health: 100,
-    dmg: 10,
     getDamage(damage){
         this.health -= damage;
     },
