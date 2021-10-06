@@ -24,7 +24,9 @@ let game = {
     },
     checkAlive(){
         if(!tSide.isAlive){
-            console.log("jbgfdsiyfay");
+            clearInterval(timer);
+        }
+        else if(!enemy.isAlive){
             clearInterval(timer);
         }  
     }
