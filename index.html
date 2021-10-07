@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="style.css">
         <script defer src="scripts/enemy.js"></script>
         <script defer src="scripts/tSide.js"></script>
+        <script defer src="scripts/game.js"></script>
     </head>
 
 
@@ -14,6 +15,7 @@
         <div id = "container" class="enemy-container">
             <div class = "Hp-enemy"></div>
             <img src="img/enemy.png" alt="botinok" class="enemy">
+            <div id = "DamageGiven"></div>
         </div>
         <div class = "ak47-handler">
             <img src="img/ak47Viewmodel.png" alt="ak47" class="ak47">
@@ -23,9 +25,7 @@
             <img src="img/healthPlus.png" alt="" class="healthPlus">
             <span class="Hp-text-tSide">100</span>
             <div class = "lifeLine"></div>
-            <div class="ammo__tSide__container counter">
-              <div class="counter__ammo"></div>
-            </div>
+            <div class="bullets">2</div>
         </div>
     </body>
 </html>

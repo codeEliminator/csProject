@@ -3,7 +3,8 @@ let HpTextTside = document.getElementsByClassName("Hp-text-tSide")[0];
 let lifeBar = document.getElementsByClassName("lifeLine")[0];
 let enemy = document.getElementsByClassName("enemy")[0];
 let ak47 = document.getElementsByClassName("ak47")[0];
-let ammo = document.getElementsByClassName("counter__ammo")[0]
+let bullets = document.querySelector('.bullets');
+
 
 
 function sleep (time) {
@@ -14,16 +15,18 @@ let tSide = {
     health: 100,
     damage: 27,
     createPercent: 0,
-    bullets: 30,
-    pivPav(){
-        ak47.style.transform = "scale(1.6)";
-        sleep(50).then(() => {
-            ak47.style.transform = "scale(1.8)";
-        });
-        weaponBulletRestriction = () => {
-          ammo.textContent = this.bullets;
-          console.log('sdfsd');
-        };
+    magBullets: 30,
+    isAlive: true,
+    shoot(){
+        if(this.isAlive == true){
+            ak47.style.transform = "scale(1.6)";
+            sleep(50).then(() => {
+                ak47.style.transform = "scale(1.8)";
+            });
+        }else{
+            alert("You are dead");
+        }
+        
     },
     giveDamage(){
         enemyCtSideLoseHp(this.damage);
@@ -42,20 +45,36 @@ let tSide = {
     },
     checkHealth(){
         if(this.health <= 0){
+            this.isAlive = false;
             HpTextTside.textContent = 0;
             lifeBar.style.display = "none";
             alert("you are dead");
         }
     },
-    weaponBulletRestriction(){
-      
+    bulletsRectriction(event) {
+      bullets.textContent = Number(bullets.textContent) - 1;
+      if (Number(bullets.textContent) === 0) {
+        tSide.reloadWeapon();
+      }
+      if (event.keyCode === 82) {
+        tSide.reloadWeapon();
+      }
     },
-    weaponReload(){
-
-    }
+    reloadWeapon(event) {
+      bullets.textContent = '30';
+    },
 }
-
+let shoot = tSide.shoot.bind(tSide);
 let tSideGiveDamage = tSide.giveDamage.bind(tSide);
-let test = tSide.pivPav.bind(tSide);
-document.body.addEventListener("click", tSide.pivPav);
+let tSideGetDamage = tSide.hpBar.bind(tSide);
+document.body.addEventListener("click", shoot);
+document.body.addEventListener("click", tSide.bulletsRectriction);
 enemy.addEventListener("click", tSideGiveDamage);
+
+// let reload = (e) => {
+//   if (e){
+//     console.log(e);
+//   }
+// }
+
+// document.body.addEventListener("keydown", reload);
