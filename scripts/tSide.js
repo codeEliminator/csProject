@@ -15,7 +15,6 @@ let tSide = {
     health: 100,
     damage: 27,
     createPercent: 0,
-    magBullets: 30,
     isAlive: true,
     shoot(){
         if(this.isAlive == true){
@@ -53,15 +52,14 @@ let tSide = {
     },
     bulletsRectriction(event) {
       bullets.textContent = Number(bullets.textContent) - 1;
-      if (Number(bullets.textContent) === 0) {
-        tSide.reloadWeapon();
-      }
-      if (event.keyCode === 82) {
-        tSide.reloadWeapon();
+      if (Number(bullets.textContent) === 0 || Number(bullets.textContent) < 0) {
+        bullets.textContent = '30';
       }
     },
     reloadWeapon(event) {
-      bullets.textContent = '30';
+      if (event.code === 'KeyR'){
+        bullets.textContent = '30';
+      }
     },
 }
 let shoot = tSide.shoot.bind(tSide);
@@ -69,12 +67,13 @@ let tSideGiveDamage = tSide.giveDamage.bind(tSide);
 let tSideGetDamage = tSide.hpBar.bind(tSide);
 document.body.addEventListener("click", shoot);
 document.body.addEventListener("click", tSide.bulletsRectriction);
+document.body.addEventListener('keypress', tSide.reloadWeapon)
 enemy.addEventListener("click", tSideGiveDamage);
+
 
 // let reload = (e) => {
 //   if (e){
 //     console.log(e);
 //   }
 // }
-
 // document.body.addEventListener("keydown", reload);
