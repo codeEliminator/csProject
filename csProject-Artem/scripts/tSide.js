@@ -3,7 +3,6 @@ let HpTextTside = document.getElementsByClassName("Hp-text-tSide")[0];
 let lifeBar = document.getElementsByClassName("lifeLine")[0];
 let enemy = document.getElementsByClassName("enemy")[0];
 let ak47 = document.getElementsByClassName("ak47")[0];
-let hpRedbox = document.getElementsByClassName("hpbox")[0];
 
 
 function sleep (time) {
@@ -55,8 +54,3 @@ let tSideGiveDamage = tSide.giveDamage.bind(tSide);
 let tSideGetDamage = tSide.hpBar.bind(tSide);
 document.body.addEventListener("click", shoot);
 enemy.addEventListener("click", tSideGiveDamage);
-
-let hpRedbox = () =>{
-console.log(hpRedbox)
-}
-document.body.addEventListener('click',hpRedbox)

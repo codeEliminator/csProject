@@ -32,7 +32,7 @@ span.Hp-text-enemy{
 }
 .Hp-enemy{
     height: 10px;
-    top: 21%;
+    top: 40%;
     width: 100px;
     background-color: red;
     border: 1px solid black;
@@ -97,19 +97,4 @@ img.ak47{
     position: absolute;
     background-color: #ff000067;
     display: none;
-}
-div.hp-box {
-    display: flex;
-    height: 120px;
-    width: 120px;
-
-}
-.healthBox {
-    height: 77px;
-    width: 83px;
-    box-sizing: content-box;
-    overflow: hidden;
-    position: absolute;
-    left: 26px;
-    top: 116px;
 }
