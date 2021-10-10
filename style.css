@@ -98,3 +98,18 @@ img.ak47{
     background-color: #ff000067;
     display: none;
 }
+div.hp-box {
+    display: flex;
+    height: 120px;
+    width: 120px;
+
+}
+.healthBox {
+    height: 77px;
+    width: 83px;
+    box-sizing: content-box;
+    overflow: hidden;
+    position: absolute;
+    left: 26px;
+    top: 116px;
+}
