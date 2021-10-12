@@ -11,6 +11,9 @@ html,body{
     height: 100px;
 }
 .contentHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 940px;
     height: 100%;
@@ -41,7 +44,7 @@ html,body{
     font-size: 18px;
     color: rgb(187, 187, 187);
 }
-.form-control{
+#form-control{
     display: block;
     padding: 10px 7px;
     border: 1px solid yellow;

@@ -2,19 +2,12 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-        <script defer src="scripts/enemy.js"></script>
-        <script defer src="scripts/tSide.js"></script>
-        <script defer src="scripts/game.js"></script>
     </head>
-
-
     <body>
-        <div class="lvl">
-            <span>LVL: 1</span>
-        </div>
-        <div class="changeEnemy">
-            <a href="index.html"><div>Change Enemy</div></a>
-        </div>
+      <div class="about__info">
+        <span class="lvl">LVL: </span>
+        <a href="index.html"><div>Change Enemy</div></a>
+      </div>
         <div id = "container" class="enemy-container">
             <div class = "Hp-enemy"></div>
             <img src="img/enemy1.png" alt="botinok" class="enemy">
@@ -28,7 +21,13 @@
             <img src="img/healthPlus.png" alt="" class="healthPlus">
             <span class="Hp-text-tSide">100</span>
             <div class = "lifeLine"></div>
+            <div class="bullets">30</div>
         </div>
-        
+        <div class = "hp-box" >
+            <img src="img/hpBox.png" alt="" class="healthBox">
+        </div>
+        <script defer src="scripts/enemy.js"></script>
+        <script defer src="scripts/tSide.js"></script>
+        <script defer src="scripts/game.js"></script>
     </body>
 </html>

@@ -5,9 +5,8 @@ let userPassword = document.querySelector('.user_password');
 let submitButton = document.querySelector('.bttn_submit');
 
 
-let test = () => {
-  localStorage.setItem('User_Name', userName);
-  localStorage.setItem('User_Password', userPassword);
-}
 
-let test2 = submitButton.addEventListener("click", test)
+submitButton.addEventListener('click', function(){
+  localStorage.setItem('User_Name', userName.value);
+  localStorage.setItem('User_Password', userPassword.value);
+});

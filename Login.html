@@ -3,8 +3,6 @@
     <head>
         <title>Log In</title>
         <link rel="stylesheet" href="logInStyle.css">
-        <script src="scripts/game.js"></script>
-        <script src="scripts/login.js"></script>
     </head>
     <body>
         <div class="wrapper">
@@ -14,7 +12,6 @@
                         <img src="img/logo.png" alt="logo" class="logo">
                     </div>
                     <div class = "nav">
-
                     </div>
                 </div>
             </div>
@@ -23,17 +20,20 @@
                 <form name="loginForm" id="loginForm">
                     <div class = "login_row">
                         <div class = "textFormForPassAndUserName">User Name:</div>
-                        <input class='user_name' type="text" class="form-control">
+                        <input id='form-control' type="text" class="user_name">
                     <div class="login_row">
                         <div class = "textFormForPassAndUserName">Password:</div>
-                        <input class='user_password' type="password" class="form-control">
+                        <input id='form-control' type="password" class="user_password">
                     </div>
                     </div>
                 </form>
-                <input type = "button" class="bttn_submit" value = "Log In">
+                <a href="index.html">
+                  <input type = "button" class="bttn_submit" value = "Log In">
+                </a>
             </div>
             
         </div>
-        
+        <script defer src="scripts/game.js"></script>
+        <script defer src="scripts/login.js"></script>
     </body>
 </html>
